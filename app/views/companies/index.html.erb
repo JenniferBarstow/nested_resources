@@ -1,0 +1,10 @@
+<h1>Companies</h1>
+
+<%= link_to "New Company", new_company_path(@company) %>
+
+<hr>
+<% @companies.each do |company| %>
+Name:
+<%= link_to company.name %>
+<br>
+<% end %>
