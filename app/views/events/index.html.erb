@@ -1,0 +1,20 @@
+<h1><%= @company.name %></h1>
+
+<div>
+</div>
+<div>
+  <h3><%= link_to "Add Event", new_company_event_path(@company) %></h3>
+</div>
+<div>
+  <h3><%= link_to "Company Index", companies_path(@companies) %></h3>
+</div>
+
+</br>
+<% @events.each do |event| %>
+<hr>
+<br>
+<p>Event: <%= event.name %></p>
+<p>Date: <%= event.date %></p>
+<br>
+<hr>
+<% end %>

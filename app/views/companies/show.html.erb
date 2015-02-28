@@ -1,0 +1,12 @@
+<h1><%= @company.name %></h1>
+<%= link_to "Index", company_path(@company) %>
+<%= link_to "New Event", new_company_event_path(@company) %>
+<% @company.events.each do |event| %>
+<%= event.name %>
+<br>
+
+<% end %>
+
+
+<div>
+<h3><%= link_to "All Events", company_events_path(@company) %></h3></div>
